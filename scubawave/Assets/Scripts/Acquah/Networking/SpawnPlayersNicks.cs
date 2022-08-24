@@ -17,11 +17,10 @@ public class SpawnPlayersNicks : MonoBehaviourPunCallbacks
     {
         player = PhotonNetwork.LocalPlayer;
 
-
         Vector3 position = new Vector3(0f, 0f, 0f);
-        PhotonNetwork.Instantiate(playerNickPrefab.name,position, Quaternion.identity);
-
-        if (PhotonNetwork.IsMasterClient)
+        PhotonNetwork.Instantiate(playerNickPrefab.name, position, Quaternion.identity);
+       
+            if (PhotonNetwork.IsMasterClient)
         {
             startButton.SetActive(true);
         }

@@ -11,7 +11,7 @@ public class NickNameAssign : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PV = GetComponent<PhotonView>();
+        PV = GetComponentInParent<PhotonView>();
         textInput = GetComponent<TMP_Text>();
 
         if (PV.IsMine)
