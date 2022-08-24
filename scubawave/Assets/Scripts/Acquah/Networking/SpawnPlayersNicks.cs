@@ -55,4 +55,9 @@ public class SpawnPlayersNicks : MonoBehaviourPunCallbacks
             startButton.SetActive(true);
         }
     }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel("Game");
+    }
 }

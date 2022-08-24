@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Widgets/MainMenu/MainMenu.unity
+    guid: 9eb78d1407d382144965327cc85b2770
+  - enabled: 1
     path: Assets/Scenes/MultiPlayerNetworkingScenes/Loading.unity
     guid: 4a9acf11531dcbb4eadfc656f0ede028
   - enabled: 1
@@ -14,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MultiPlayerNetworkingScenes/GameLobby.unity
     guid: 419a61e1ed00964408decb41aab2853e
+  - enabled: 1
+    path: Assets/Scenes/MultiPlayerNetworkingScenes/Game.unity
+    guid: 77d5f9f3f6b4b2f4bb67d0abf893de37
   m_configObjects: {}
