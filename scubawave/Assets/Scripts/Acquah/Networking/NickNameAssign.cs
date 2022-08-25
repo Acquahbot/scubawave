@@ -14,14 +14,14 @@ public class NickNameAssign : MonoBehaviourPunCallbacks
     TMP_Text textInput;
     public GameObject leftArrow;
     public GameObject rightArrow;
-    public Image playerAvatar;
-    public Sprite[] avatars;
+    public GameObject playerAvatar;
+    public Texture[] avatars;
     Player player;
     // Start is called before the first frame update
     void Start()
     {
         PV = GetComponentInParent<PhotonView>();
-        textInput = GetComponent<TMP_Text>();
+        textInput = GetComponentInChildren<TMP_Text>();
         player = PhotonNetwork.LocalPlayer;
         UpdatePlayerItem(player);
 
@@ -88,7 +88,7 @@ public class NickNameAssign : MonoBehaviourPunCallbacks
     {
         if (player.CustomProperties.ContainsKey("playerAvatar"))
         {
-            playerAvatar.sprite = avatars[(int)player.CustomProperties["playerAvatar"]];
+            playerAvatar.GetComponent<Renderer>().material.SetTexture("_MainTex", avatars[(int)player.CustomProperties["playerAvatar"]]);
             playerProperties["playerAvatar"] = (int)player.CustomProperties["playerAvatar"];
         }
         else

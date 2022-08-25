@@ -9,6 +9,10 @@ public class SpawnPlayersNicks : MonoBehaviourPunCallbacks
 {
     public GameObject playerNickPrefab;
     public GameObject startButton;
+    public GameObject player1;
+    public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
 
     Player player;
 
@@ -18,9 +22,25 @@ public class SpawnPlayersNicks : MonoBehaviourPunCallbacks
         player = PhotonNetwork.LocalPlayer;
 
         Vector3 position = new Vector3(0f, 0f, 0f);
-        PhotonNetwork.Instantiate(playerNickPrefab.name, position, Quaternion.identity);
-       
-            if (PhotonNetwork.IsMasterClient)
+        
+        if(PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        {
+            PhotonNetwork.Instantiate(playerNickPrefab.name, player1.transform.position, player1.transform.rotation);
+        }
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
+        {
+            PhotonNetwork.Instantiate(playerNickPrefab.name, player2.transform.position, player2.transform.rotation);
+        }
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 3)
+        {
+            PhotonNetwork.Instantiate(playerNickPrefab.name, player3.transform.position, player3.transform.rotation);
+        }
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 4)
+        {
+            PhotonNetwork.Instantiate(playerNickPrefab.name, player4.transform.position, player4.transform.rotation);
+        }
+
+        if (PhotonNetwork.IsMasterClient)
         {
             startButton.SetActive(true);
         }
