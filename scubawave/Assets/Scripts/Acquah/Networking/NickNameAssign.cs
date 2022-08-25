@@ -35,6 +35,9 @@ public class NickNameAssign : MonoBehaviourPunCallbacks
         {
             textInput.text = PV.Owner.NickName;
         }
+
+        
+            
     }
 
     // Update is called once per frame
@@ -71,7 +74,11 @@ public class NickNameAssign : MonoBehaviourPunCallbacks
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
-        if(player == targetPlayer)
+        if(PV.IsMine && PhotonNetwork.LocalPlayer == targetPlayer)
+        {
+            UpdatePlayerItem(targetPlayer);
+        }
+        else if (!PV.IsMine && PhotonNetwork.LocalPlayer != targetPlayer)
         {
             UpdatePlayerItem(targetPlayer);
         }
@@ -88,5 +95,11 @@ public class NickNameAssign : MonoBehaviourPunCallbacks
         {
             playerProperties["playerAvatar"] = 0;
         }
+    }
+
+    [PunRPC]
+    public void SyncSkinPun()
+    {
+
     }
 }

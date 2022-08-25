@@ -259,7 +259,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1933845745889810566}
+      - m_Target: {fileID: 6012113755115632861}
         m_TargetAssemblyTypeName: NickNameAssign, Assembly-CSharp
         m_MethodName: OnClickRightArrow
         m_Mode: 1
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1933845745889810566}
+      - m_Target: {fileID: 6012113755115632861}
         m_TargetAssemblyTypeName: NickNameAssign, Assembly-CSharp
         m_MethodName: OnClickLeftArrow
         m_Mode: 1
@@ -448,8 +448,8 @@ GameObject:
   - component: {fileID: 4782797812980803159}
   - component: {fileID: 5703761069187002870}
   - component: {fileID: -7284165796322751259}
-  - component: {fileID: -1933845745889810566}
-  - component: {fileID: -7684150614456235278}
+  - component: {fileID: 6012113755115632861}
+  - component: {fileID: -1171943117828626612}
   m_Layer: 5
   m_Name: playerNickPrefab
   m_TagString: Untagged
@@ -602,7 +602,7 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &-1933845745889810566
+--- !u!114 &6012113755115632861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,7 +621,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0622733123bc4014a833e8351827d6f2, type: 3}
   - {fileID: 21300000, guid: 09c26a99fb7cd3d4ab70d293aae5a517, type: 3}
   - {fileID: 21300000, guid: c0f7ef24acbed3942ac666d038266c53, type: 3}
---- !u!114 &-7684150614456235278
+--- !u!114 &-1171943117828626612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
