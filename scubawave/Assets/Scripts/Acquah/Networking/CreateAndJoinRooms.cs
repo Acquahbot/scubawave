@@ -30,7 +30,8 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 4;
-        PhotonNetwork.CreateRoom(createInput.text);
+        roomOptions.BroadcastPropsChangeToAll = true;
+        PhotonNetwork.CreateRoom(createInput.text, roomOptions);
     }
     public void JoinRoom()
     {

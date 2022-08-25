@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 public class SpawnPlayers : MonoBehaviour
 {
-    public GameObject playerPrefab;
+    public GameObject[] playerPrefabs;
     public float minX;
     public float maxX;
     public float minZ;
@@ -13,7 +13,8 @@ public class SpawnPlayers : MonoBehaviour
     void Start()
     {
         Vector3 randomPosition = new Vector3(Random.Range(minX, maxX), 2, Random.Range(minZ, maxZ));
-        PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
+        GameObject playerToSpawn = playerPrefabs[((int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"])];
+        PhotonNetwork.Instantiate(playerToSpawn.name, randomPosition, Quaternion.identity);
     }
 
     // Update is called once per frame
