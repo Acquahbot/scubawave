@@ -4,16 +4,19 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
+
+    public static CreateAndJoinRooms Instance;
     // Start is called before the first frame update
     public TMP_InputField createInput;
     public TMP_InputField joinInput;
     public TMP_InputField nameInput;
-    void Start()
+    void Awake()
     {
-        
+        Instance = this;
     }
 
     // Update is called once per frame
@@ -24,6 +27,10 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     void Update()
     {
         
+    }
+    public void JoinRoom2(RoomInfo info)
+    {
+        PhotonNetwork.JoinRoom(info.Name);
     }
 
     public void CreateRoom()
@@ -41,6 +48,11 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        
         PhotonNetwork.LoadLevel("GameLobby");
+    }
+    public void OnJoinClick()
+    {
+        SceneManager.LoadScene("ServerBrowser");
     }
 }

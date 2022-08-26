@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MultiPlayerNetworkingScenes/Main.unity
     guid: 835b70d319ee4f44bb526e7c1570598b
   - enabled: 1
+    path: Assets/Scenes/MultiPlayerNetworkingScenes/MenuScenes/ServerBrowser.unity
+    guid: 7f1c2a7ba85a85b459bd1fb7263591bf
+  - enabled: 1
     path: Assets/Scenes/MultiPlayerNetworkingScenes/GameLobby.unity
     guid: 419a61e1ed00964408decb41aab2853e
   - enabled: 1
