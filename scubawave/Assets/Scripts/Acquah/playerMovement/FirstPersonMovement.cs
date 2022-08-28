@@ -58,6 +58,14 @@ public class FirstPersonMovement : MonoBehaviour
             {
                 anim.SetTrigger("WalkingForward");
             }
+            else if(targetVelocity.y < 0)
+            {
+                anim.SetTrigger("WalkingBackward");
+            }
+            else if (targetVelocity.x != 0 || targetVelocity.y !=0)
+            {
+                anim.SetTrigger("WalkingForward");
+            }
             else
             {
                 anim.SetTrigger("idle");

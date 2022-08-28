@@ -372,6 +372,7 @@ MonoBehaviour:
   canRun: 1
   runSpeed: 9
   runningKey: 304
+  anim: {fileID: 0}
 --- !u!114 &7081780672592960283
 MonoBehaviour:
   m_ObjectHideFlags: 0

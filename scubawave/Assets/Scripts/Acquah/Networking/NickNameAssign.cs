@@ -20,6 +20,8 @@ public class NickNameAssign : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        playerProperties["playerAvatar"] = 0;
+        PhotonNetwork.SetPlayerCustomProperties(playerProperties);
         PV = GetComponentInParent<PhotonView>();
         textInput = GetComponentInChildren<TMP_Text>();
         player = PhotonNetwork.LocalPlayer;
